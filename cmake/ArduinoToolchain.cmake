@@ -60,7 +60,9 @@ if(NOT ARDUINO_SDK_PATH)
         file(GLOB SDK_PATH_HINTS /usr/share/arduino*
             /opt/local/arduino*
             /opt/arduino*
-            /usr/local/share/arduino*)
+            /usr/local/share/arduino*
+            $ENV{ANDROID_SDK_PATH}
+        )
     elseif(WIN32)
         set(SDK_PATH_HINTS "C:\\Program Files\\Arduino"
             "C:\\Program Files (x86)\\Arduino"
